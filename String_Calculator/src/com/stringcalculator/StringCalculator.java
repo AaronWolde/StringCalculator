@@ -13,7 +13,6 @@ public class StringCalculator {
 		String words[]= numbers.split("[,\n]");
 
 		for(int i = 0; i < words.length; i++) {
-			System.out.println(words[i]+"\n");
 			sum += Integer.parseInt(words[i]); 
 		}
 		return sum;
