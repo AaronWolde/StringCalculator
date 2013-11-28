@@ -45,5 +45,12 @@ public class StringCalculatorTester {
 		int result = calc.Add("//;\n1,2\n3");
 		assertEquals(result, 6);
 	}
+	
+	@Test
+	public void testAdd7() {
+		StringCalculator calc = new StringCalculator();
+		int result = calc.Add("-4,-5,3");
+		assertEquals(result, -6);
+	}
 
 }

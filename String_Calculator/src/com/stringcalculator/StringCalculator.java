@@ -20,11 +20,23 @@ public class StringCalculator {
 			words= numbers.split("[,\n]");
 		}
 		
+		boolean negative_flag = false;
+		String negativs = new String();
 		
 		for(int i = 0; i < words.length; i++) {
-			if(!words[i].equals(""))
-				sum += Integer.parseInt(words[i]); 
+			if(!words[i].equals("")) {		
+				int num = Integer.parseInt(words[i]); 
+				if(num < 0) {
+					negativs += words[i] +" ,";
+					negative_flag = true;
+				}
+				sum += num; 
+			}
 		}
+		if(negative_flag == true) {
+			System.out.println("negatives not allowed:"+negativs);
+		}
+		
 		return sum;
 	}
 
