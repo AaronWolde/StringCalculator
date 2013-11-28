@@ -9,8 +9,8 @@ public class StringCalculatorTester {
 	@Test
 	public void testAdd() {
 		StringCalculator calc = new StringCalculator();
-		int result = calc.Add("");
-		assertEquals(calc.getResult(), 0);
+		int result = calc.Add("1");
+		assertEquals(result, 1);
 	}
 
 }
