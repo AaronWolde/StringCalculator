@@ -1,30 +1,29 @@
 package com.stringcalculator;
 
 public class StringCalculator {
-	
+
 	private int result;
-	
+
 	int Add(String numbers) {
 		if(numbers.equals("") == true) {
 			return 0;
 		}
-		if(numbers.equals("1") == true) {
-			return 1;
+
+		int sum = 0;
+
+		for(int i = 0; i < numbers.length(); i++) {
+			if(numbers.charAt(i) != ',') {
+				sum += numbers.charAt(i); 
+			}
 		}
-		if(numbers.equals("1,2") == true) {
-			return 3;
-		}
-		if(numbers.equals("2,1") == true) {
-			return 3;
-		}
-		
-		return 0;
+
+		return sum;
 	}
 
 	public Object getResult() {
 		return this.result;
 	}
-	
-	
+
+
 
 }
