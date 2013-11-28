@@ -13,7 +13,7 @@ public class StringCalculator {
 
 		for(int i = 0; i < numbers.length(); i++) {
 			if(numbers.charAt(i) != ',') {
-				sum += numbers.charAt(i); 
+				sum += (numbers.charAt(i) - '0'); 
 			}
 		}
 
